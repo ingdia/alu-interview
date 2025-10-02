@@ -28,11 +28,11 @@ def rain(walls):
 
         # Process the smaller wall
         if left_max <= right_max:
-            # Water at left position = min(left_max, right_max) - current height
+            # Water at left: min of left_max, right_max minus current height
             total_water += left_max - walls[left]
             left += 1
         else:
-            # Water at right position = min(left_max, right_max) - current height
+            # Water at right: min of left_max, right_max minus current height
             total_water += right_max - walls[right]
             right -= 1
 
